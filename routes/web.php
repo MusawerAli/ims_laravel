@@ -55,6 +55,7 @@ Route::post('/store','RegisterController@store');
     // Route::get('category', function () {
     //     return view('html/category');
     // });
+    Route:
 
 
     /*
