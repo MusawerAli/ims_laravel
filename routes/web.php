@@ -51,11 +51,12 @@ Route::post('/store','RegisterController@store');
 |
 |
 */
-    Route::resource('categorie', 'CategorieController');
+    //Route::resource('categorie', 'CategorieController');
     // Route::get('category', function () {
     //     return view('html/category');
     // });
-    Route:
+    Route::resource('/allcategorie','CategorieController');
+    Route::get('/all/categorie','CategorieController@AllCategorie')->name('all.category');
 
 
     /*
@@ -69,3 +70,21 @@ Route::post('/store','RegisterController@store');
 
 Route::resource('/user', 'UserController');
 Route::get('/user_data/json','UserController@User_json')->name('user_data.json');
+
+
+
+
+/*
+|---------------------------------------------------------
+|Invoices  Related
+|---------------------------------------------------------
+|JUST Work only Invoices
+|
+|
+*/
+    //Route::resource('categorie', 'CategorieController');
+    // Route::get('category', function () {
+    //     return view('html/category');
+    // });
+    Route::resource('/po_invoices','InvoiceController');
+    

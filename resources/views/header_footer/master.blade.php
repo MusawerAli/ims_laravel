@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
+    @yield('meta')
     <meta name="author" content="">
 
     <title>@yield('title')</title>
@@ -33,7 +34,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <style>
+        body {font-family: "Times New Roman", Georgia, Serif;}
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "Playfair Display";
+          letter-spacing: 5px;
+        }
+        </style>
 </head>
 
 <body>
@@ -281,7 +288,7 @@
                             <a href="dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="categorie"><i class="fa fa-edit fa-fw"></i> Category</a>
+                            <a href="allcategorie"><i class="fa fa-edit fa-fw"></i> Category</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -313,7 +320,7 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Invoices<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">PO Invoices</a>
+                                    <a href="po_invoices">PO Invoices</a>
                                 </li>
                                
                             </ul>
@@ -413,7 +420,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{{URL::asset('public/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-
+   
     <!-- Metis Menu Plugin JavaScript -->
     <script src="{{URL::asset('public/vendor/metisMenu/metisMenu.min.js')}}"></script>
 
